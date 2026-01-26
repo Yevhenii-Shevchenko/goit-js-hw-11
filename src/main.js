@@ -30,7 +30,7 @@ const form = document.querySelector(`.form`);
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const searchInput = form.querySelector('input[name="search-text"]');
+  const searchInput =(event.target.elements["search-text"]);
   const searchQuery = searchInput.value.trim();
 
   searchInput.value = '';
@@ -63,12 +63,13 @@ form.addEventListener('submit', event => {
     })
     .catch(error => {
       hideLoader();
-      iziToast.error({
+      iziToast.warning({
         title: 'Error',
         message: error.message || 'Failed to fetch images. Please try again.',
-        position: 'topRight',
+        position: 'topRight',        
+        progressBarColor: '#B51B1B',
+        
       });
       console.error(error);
     });
 });
-getImageByQuery
