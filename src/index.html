@@ -5,10 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Goit-js-hw-11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="container">
+    <main>
       <form class="form">
         <label>
           <input
@@ -19,13 +25,12 @@
           />
         </label>
         <button type="submit">Search</button>
-        <label>
-          Delay (ms)
-          <input class="delay-input" type="number" name="delay" required />
-        </label>
       </form>
-    </div>
-    <main></main>
+      <div class="loader-container" style="display: none">
+        <span class="loader"></span>
+      </div>
+      <ul class="gallery"></ul>
+    </main>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
