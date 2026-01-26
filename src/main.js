@@ -55,7 +55,8 @@ form.addEventListener('submit', event => {
           title: 'info',
           message:
             'Sorry, there are no images matching your search query. Please try again!',
-          position: 'topRight',
+         position: 'topRight',
+          progressBarColor: '#B51B1B',
         });
         return;
       }
@@ -63,7 +64,7 @@ form.addEventListener('submit', event => {
     })
     .catch(error => {
       hideLoader();
-      iziToast.warning({
+      iziToast.error({
         title: 'Error',
         message: error.message || 'Failed to fetch images. Please try again.',
         position: 'topRight',        
